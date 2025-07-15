@@ -81,6 +81,10 @@
   --font-body: "Space Mono", "Segoe UI", Tahoma, Geneva, Verdana, monospace;
   --font-special: "Spectra Volt", monospace;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -111,39 +115,56 @@ body {
 }
 
 /* Header Styles */
-.header {
-  position: fixed;
+header {
+  display: flex;
+  position: absolute;
   top: 0;
+  right: 0;
   left: 0;
-  width: 100%;
-  background: rgba(10, 10, 10, 0.9);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  padding: 1rem 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.121);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px var(--moody-purple);
+  z-index: 999;
 }
 
 .navbar {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
 }
-
-.nav-brand a {
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+.nav-brand h1 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
-  color: var(--satin-sheen-gold);
+  font-size: 1rem;
+  color: var(--lunar-ash);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
+}
+.nav-brand img {
+  width: 40px;
+  margin: 0 15px;
 }
 
 .nav-menu {
   display: flex;
+  justify-content: space-between;
+  width: 30%;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  padding: 15px 15px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 69, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px var(--moody-purple);
   gap: 2rem;
 }
 
@@ -151,11 +172,28 @@ body {
   color: var(--lunar-ash);
   text-decoration: none;
   font-family: var(--font-primary);
+  margin: 0 10px;
   transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
   color: var(--sunset-orange);
+}
+
+.box-icons {
+  display: flex;
+  gap: 40px;
+}
+
+.box-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  color: var(--satin-sheen-gold);
 }
 
 /* Main Content Styles */
