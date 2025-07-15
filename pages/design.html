@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Design System | Omegea Hunter Portfolio</title>
+    <meta
+      name="description"
+      content="Design system and style guide for Omegea Hunter's animated portfolio"
+    />
+    <meta
+      name="keywords"
+      content="design system, style guide, UI components, typography, colors"
+    />
+    <meta name="author" content="Omegea Hunter" />
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta
+      property="og:title"
+      content="Design System | Omegea Hunter Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Comprehensive design system showcasing typography, colors, and components"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <meta property="og:image" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
+
+    <!-- Preload important resources -->
+    <link rel="preload" href="" as="font" type="font/woff2" crossorigin />
+
+    <style>
+      /* Design System Specific Styles */
+      .design-system {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        background: rgba(10, 10, 10, 0.95);
+        min-height: 100vh;
+      }
+
+      .ds-header {
+        text-align: center;
+        margin-bottom: 4rem;
+        padding: 2rem 0;
+        border-bottom: 2px solid var(--satin-sheen-gold);
+      }
+
+      .ds-title {
+        font-family: var(--font-display);
+        font-size: 3.5rem;
+        color: var(--satin-sheen-gold);
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      .ds-subtitle {
+        font-family: var(--font-accent);
+        font-size: 1.2rem;
+        color: var(--lunar-ash);
+        opacity: 0.8;
+      }
+
+      .ds-section {
+        margin-bottom: 4rem;
+        padding: 2rem;
+        background: rgba(58, 36, 101, 0.1);
+        border-radius: 15px;
+        border-left: 4px solid var(--moody-purple);
+      }
+
+      .ds-section-title {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        color: var(--sunset-orange);
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .ds-section-title::before {
+        content: "";
+        width: 4px;
+        height: 30px;
+        background: var(--sunset-orange);
+        border-radius: 2px;
+      }
+
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .color-card {
+        background: rgba(30, 58, 42, 0.2);
+        border-radius: 10px;
+        padding: 1rem;
+        border: 1px solid rgba(196, 167, 66, 0.2);
+      }
+
+      .color-swatch {
+        width: 100%;
+        height: 80px;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        border: 2px solid rgba(232, 230, 225, 0.1);
+      }
+
+      .color-info h4 {
+        font-family: var(--font-primary);
+        color: var(--lunar-ash);
+        margin: 0.5rem 0;
+      }
+
+      .color-info p {
+        font-family: var(--font-special);
+        color: var(--satin-sheen-gold);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      .typography-showcase {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .font-example {
+        padding: 1.5rem;
+        background: rgba(30, 58, 42, 0.1);
+        border-radius: 10px;
+        border-left: 3px solid var(--forest-green);
+      }
+
+      .font-name {
+        font-family: var(--font-primary);
+        color: var(--satin-sheen-gold);
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      .font-sample {
+        margin-bottom: 0.5rem;
+      }
+
+      .components-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .component-card {
+        background: rgba(58, 36, 101, 0.15);
+        padding: 2rem;
+        border-radius: 15px;
+        border: 1px solid var(--moody-purple);
+      }
+
+      .component-title {
+        font-family: var(--font-primary);
+        color: var(--lunar-ash);
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .btn-showcase {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+
+      .btn-primary {
+        background: linear-gradient(
+          45deg,
+          var(--sunset-orange),
+          var(--moody-purple)
+        );
+        color: var(--lunar-ash);
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        font-family: var(--font-primary);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--satin-sheen-gold);
+        border: 2px solid var(--satin-sheen-gold);
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        font-family: var(--font-primary);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn-ghost {
+        background: transparent;
+        color: var(--lunar-ash);
+        border: 1px solid var(--lunar-ash);
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        font-family: var(--font-primary);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .card-example {
+        background: rgba(10, 10, 10, 0.8);
+        border-radius: 15px;
+        padding: 1.5rem;
+        border: 1px solid rgba(196, 167, 66, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      .spacing-example {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .spacing-box {
+        background: var(--moody-purple);
+        color: var(--lunar-ash);
+        padding: 1rem;
+        border-radius: 8px;
+        font-family: var(--font-primary);
+        text-align: center;
+      }
+
+      .animation-demo {
+        width: 100px;
+        height: 100px;
+        background: var(--sunset-orange);
+        border-radius: 50%;
+        margin: 2rem auto;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.1);
+          opacity: 0.7;
+        }
+      }
+
+      .grid-demo {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+
+      .grid-item {
+        background: var(--forest-green);
+        padding: 1rem;
+        border-radius: 8px;
+        color: var(--lunar-ash);
+        text-align: center;
+        font-family: var(--font-primary);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="design-system">
+      <!-- Header -->
+      <header class="ds-header">
+        <h1 class="ds-title">Design System</h1>
+        <p class="ds-subtitle">
+          Visual language and component library for the Animated Portfolio
+        </p>
+      </header>
+
+      <!-- Color Palette Section -->
+      <section class="ds-section">
+        <h2 class="ds-section-title">Color Palette</h2>
+        <div class="color-grid">
+          <div class="color-card">
+            <div
+              class="color-swatch"
+              style="background-color: var(--void-black)"
+            ></div>
+            <div class="color-info">
+              <h4>Void Black</h4>
+              <p>--void-black</p>
+              <p>#0a0a0a</p>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div
+              class="color-swatch"
+              style="background-color: var(--sunset-orange)"
+            ></div>
+            <div class="color-info">
+              <h4>Sunset Orange</h4>
+              <p>--sunset-orange</p>
+              <p>#d3541a</p>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div
+              class="color-swatch"
+              style="background-color: var(--moody-purple)"
+            ></div>
+            <div class="color-info">
+              <h4>Moody Purple</h4>
+              <p>--moody-purple</p>
+              <p>#3a2465</p>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div
+              class="color-swatch"
+              style="background-color: var(--forest-green)"
+            ></div>
+            <div class="color-info">
+              <h4>Forest Green</h4>
+              <p>--forest-green</p>
+              <p>#1e3a2a</p>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div
+              class="color-swatch"
+              style="background-color: var(--satin-sheen-gold)"
+            ></div>
+            <div class="color-info">
+              <h4>Satin Sheen Gold</h4>
+              <p>--satin-sheen-gold</p>
+              <p>#c4a742</p>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div
+              class="color-swatch"
+              style="background-color: var(--lunar-ash)"
+            ></div>
+            <div class="color-info">
+              <h4>Lunar Ash</h4>
+              <p>--lunar-ash</p>
+              <p>#e8e6e1</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Typography Section -->
+      <section class="ds-section">
+        <h2 class="ds-section-title">Typography</h2>
+        <div class="typography-showcase">
+          <div class="font-example">
+            <div class="font-name">District (Primary Font)</div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-primary); font-size: 2rem"
+            >
+              The quick brown fox jumps
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-primary); font-size: 1.2rem"
+            >
+              ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-primary); font-size: 1rem"
+            >
+              Used for navigation, body text, and general UI elements
+            </div>
+          </div>
+
+          <div class="font-example">
+            <div class="font-name">Rubik Glitch (Heading Font)</div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-heading); font-size: 2rem"
+            >
+              Creative Headlines
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-heading); font-size: 1.2rem"
+            >
+              DIGITAL AESTHETIC
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-primary); font-size: 1rem"
+            >
+              Perfect for section titles and attention-grabbing headers
+            </div>
+          </div>
+
+          <div class="font-example">
+            <div class="font-name">Aquoos 3D (Display Font)</div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-display); font-size: 2rem"
+            >
+              HERO TITLES
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-display); font-size: 1.2rem"
+            >
+              BRAND ELEMENTS
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-primary); font-size: 1rem"
+            >
+              Used for logos, hero sections, and major brand elements
+            </div>
+          </div>
+
+          <div class="font-example">
+            <div class="font-name">Genniro (Accent Font)</div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-accent); font-size: 2rem"
+            >
+              Elegant Accents
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-accent); font-size: 1.2rem"
+            >
+              Sophisticated Details
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-primary); font-size: 1rem"
+            >
+              For quotes, special callouts, and refined text elements
+            </div>
+          </div>
+
+          <div class="font-example">
+            <div class="font-name">Kora (Body Font)</div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-body); font-size: 2rem"
+            >
+              Readable Content
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-body); font-size: 1.2rem"
+            >
+              Lorem ipsum dolor sit amet consectetur
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-primary); font-size: 1rem"
+            >
+              Optimized for readability in paragraphs and long-form content
+            </div>
+          </div>
+
+          <div class="font-example">
+            <div class="font-name">Spectra Volt (Special Font)</div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-special); font-size: 2rem"
+            >
+              CODE_ELEMENTS
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-special); font-size: 1.2rem"
+            >
+              console.log("Hello World");
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-primary); font-size: 1rem"
+            >
+              For code snippets, technical details, and monospace needs
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Components Section -->
+      <section class="ds-section">
+        <h2 class="ds-section-title">Components</h2>
+        <div class="components-grid">
+          <!-- Buttons -->
+          <div class="component-card">
+            <h3 class="component-title">Buttons</h3>
+            <div class="btn-showcase">
+              <button class="btn-primary">Primary</button>
+              <button class="btn-secondary">Secondary</button>
+              <button class="btn-ghost">Ghost</button>
+            </div>
+          </div>
+
+          <!-- Cards -->
+          <div class="component-card">
+            <h3 class="component-title">Cards</h3>
+            <div class="card-example">
+              <h4
+                style="
+                  font-family: var(--font-heading);
+                  color: var(--satin-sheen-gold);
+                  margin-top: 0;
+                "
+              >
+                Card Title
+              </h4>
+              <p
+                style="
+                  font-family: var(--font-body);
+                  color: var(--lunar-ash);
+                  margin-bottom: 0;
+                "
+              >
+                This is an example card component with glassmorphism effect and
+                custom styling.
+              </p>
+            </div>
+          </div>
+
+          <!-- Animation Demo -->
+          <div class="component-card">
+            <h3 class="component-title">Animations</h3>
+            <div class="animation-demo"></div>
+            <p
+              style="
+                text-align: center;
+                color: var(--lunar-ash);
+                font-family: var(--font-body);
+              "
+            >
+              Pulse Animation Example
+            </p>
+          </div>
+
+          <!-- Grid System -->
+          <div class="component-card">
+            <h3 class="component-title">Grid System</h3>
+            <div class="grid-demo">
+              <div class="grid-item">1</div>
+              <div class="grid-item">2</div>
+              <div class="grid-item">3</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Spacing Section -->
+      <section class="ds-section">
+        <h2 class="ds-section-title">Spacing & Layout</h2>
+        <div class="spacing-example">
+          <div class="spacing-box">2rem - Large spacing</div>
+          <div class="spacing-box">1rem - Medium spacing</div>
+          <div class="spacing-box">0.5rem - Small spacing</div>
+        </div>
+      </section>
+
+      <!-- Usage Guidelines -->
+      <section class="ds-section">
+        <h2 class="ds-section-title">Usage Guidelines</h2>
+        <div
+          style="
+            color: var(--lunar-ash);
+            font-family: var(--font-body);
+            line-height: 1.6;
+          "
+        >
+          <h3
+            style="
+              color: var(--satin-sheen-gold);
+              font-family: var(--font-primary);
+            "
+          >
+            Color Usage
+          </h3>
+          <ul>
+            <li>
+              <strong>Void Black:</strong> Primary background color for depth
+              and contrast
+            </li>
+            <li>
+              <strong>Sunset Orange:</strong> Call-to-action buttons, links, and
+              attention elements
+            </li>
+            <li>
+              <strong>Moody Purple:</strong> Secondary elements, gradients, and
+              accents
+            </li>
+            <li>
+              <strong>Forest Green:</strong> Success states, nature-themed
+              elements
+            </li>
+            <li>
+              <strong>Satin Sheen Gold:</strong> Premium elements, headings, and
+              highlights
+            </li>
+            <li>
+              <strong>Lunar Ash:</strong> Primary text color for optimal
+              readability
+            </li>
+          </ul>
+
+          <h3
+            style="
+              color: var(--satin-sheen-gold);
+              font-family: var(--font-primary);
+              margin-top: 2rem;
+            "
+          >
+            Typography Hierarchy
+          </h3>
+          <ul>
+            <li>
+              <strong>H1:</strong> Use Display font for hero titles and main
+              branding
+            </li>
+            <li><strong>H2-H3:</strong> Use Heading font for section titles</li>
+            <li><strong>Navigation:</strong> Use Primary font for clarity</li>
+            <li><strong>Body Text:</strong> Use Body font for readability</li>
+            <li>
+              <strong>Code/Technical:</strong> Use Special font for technical
+              content
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <script src="../app.js"></script>
+  </body>
+</html>
