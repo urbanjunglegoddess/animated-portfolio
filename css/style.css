@@ -1,5 +1,21 @@
 /* Font Face Declarations */
 @font-face {
+  font-family: "JabbingDemoTexture";
+  src: url("../assets/fonts/JabbingDemoTexture.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("../assets/fonts/SpaceMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "District";
   src: url("../assets/fonts/District.ttf") format("truetype");
   font-weight: normal;
@@ -58,11 +74,11 @@
   --lunar-ash: #e8e6e1ff;
 
   /* Font Variables */
-  --font-primary: "District", Arial, sans-serif;
-  --font-heading: "Rubik Glitch", "District", Arial, sans-serif;
+  --font-primary: "JabbingDemoTexture", Arial, sans-serif;
+  --font-heading: "Rubik Glitch", "JabbingDemoTexture", Arial, sans-serif;
   --font-accent: "Genniro", Georgia, serif;
   --font-display: "Aquoos 3D", Impact, sans-serif;
-  --font-body: "Kora", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-body: "Space Mono", "Segoe UI", Tahoma, Geneva, Verdana, monospace;
   --font-special: "Spectra Volt", monospace;
 }
 body {

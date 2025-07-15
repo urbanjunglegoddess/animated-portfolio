@@ -42,6 +42,23 @@
     <link rel="preload" href="" as="font" type="font/woff2" crossorigin />
 
     <style>
+      /* Font Face Declarations for Design System */
+      @font-face {
+        font-family: "JabbingDemoTexture";
+        src: url("../assets/fonts/JabbingDemoTexture.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Space Mono";
+        src: url("../assets/fonts/SpaceMono-Regular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
       /* Design System Specific Styles */
       .design-system {
         max-width: 1200px;
@@ -377,7 +394,7 @@
         <h2 class="ds-section-title">Typography</h2>
         <div class="typography-showcase">
           <div class="font-example">
-            <div class="font-name">District (Primary Font)</div>
+            <div class="font-name">JabbingDemoTexture (Primary Font)</div>
             <div
               class="font-sample"
               style="font-family: var(--font-primary); font-size: 2rem"
@@ -392,9 +409,32 @@
             </div>
             <div
               class="font-sample"
-              style="font-family: var(--font-primary); font-size: 1rem"
+              style="font-family: var(--font-body); font-size: 1rem"
             >
-              Used for navigation, body text, and general UI elements
+              Used for navigation, UI elements, and primary interface text
+            </div>
+          </div>
+
+          <div class="font-example">
+            <div class="font-name">Space Mono (Body Font)</div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-body); font-size: 2rem"
+            >
+              Readable Content
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-body); font-size: 1.2rem"
+            >
+              Lorem ipsum dolor sit amet consectetur adipiscing elit
+            </div>
+            <div
+              class="font-sample"
+              style="font-family: var(--font-body); font-size: 1rem"
+            >
+              Optimized for readability in paragraphs, body text, and long-form
+              content. Monospace design ensures consistent character spacing.
             </div>
           </div>
 
@@ -414,7 +454,7 @@
             </div>
             <div
               class="font-sample"
-              style="font-family: var(--font-primary); font-size: 1rem"
+              style="font-family: var(--font-body); font-size: 1rem"
             >
               Perfect for section titles and attention-grabbing headers
             </div>
@@ -436,7 +476,7 @@
             </div>
             <div
               class="font-sample"
-              style="font-family: var(--font-primary); font-size: 1rem"
+              style="font-family: var(--font-body); font-size: 1rem"
             >
               Used for logos, hero sections, and major brand elements
             </div>
@@ -458,31 +498,37 @@
             </div>
             <div
               class="font-sample"
-              style="font-family: var(--font-primary); font-size: 1rem"
+              style="font-family: var(--font-body); font-size: 1rem"
             >
               For quotes, special callouts, and refined text elements
             </div>
           </div>
 
           <div class="font-example">
-            <div class="font-name">Kora (Body Font)</div>
+            <div class="font-name">District (Secondary Font)</div>
             <div
               class="font-sample"
-              style="font-family: var(--font-body); font-size: 2rem"
+              style="
+                font-family: 'District', Arial, sans-serif;
+                font-size: 2rem;
+              "
             >
-              Readable Content
+              Clean Typography
             </div>
             <div
               class="font-sample"
-              style="font-family: var(--font-body); font-size: 1.2rem"
+              style="
+                font-family: 'District', Arial, sans-serif;
+                font-size: 1.2rem;
+              "
             >
-              Lorem ipsum dolor sit amet consectetur
+              ABCDEFGHIJKLMNOPQRSTUVWXYZ
             </div>
             <div
               class="font-sample"
-              style="font-family: var(--font-primary); font-size: 1rem"
+              style="font-family: var(--font-body); font-size: 1rem"
             >
-              Optimized for readability in paragraphs and long-form content
+              Available as fallback or alternative typography option
             </div>
           </div>
 
@@ -502,7 +548,7 @@
             </div>
             <div
               class="font-sample"
-              style="font-family: var(--font-primary); font-size: 1rem"
+              style="font-family: var(--font-body); font-size: 1rem"
             >
               For code snippets, technical details, and monospace needs
             </div>
@@ -643,15 +689,28 @@
           </h3>
           <ul>
             <li>
-              <strong>H1:</strong> Use Display font for hero titles and main
-              branding
+              <strong>H1:</strong> Use Display font (Aquoos 3D) for hero titles
+              and main branding
             </li>
-            <li><strong>H2-H3:</strong> Use Heading font for section titles</li>
-            <li><strong>Navigation:</strong> Use Primary font for clarity</li>
-            <li><strong>Body Text:</strong> Use Body font for readability</li>
             <li>
-              <strong>Code/Technical:</strong> Use Special font for technical
-              content
+              <strong>H2-H3:</strong> Use Heading font (Rubik Glitch) for
+              section titles
+            </li>
+            <li>
+              <strong>Navigation & UI:</strong> Use Primary font
+              (JabbingDemoTexture) for interface elements
+            </li>
+            <li>
+              <strong>Body Text:</strong> Use Body font (Space Mono) for
+              readability and content
+            </li>
+            <li>
+              <strong>Accents:</strong> Use Accent font (Genniro) for quotes and
+              special callouts
+            </li>
+            <li>
+              <strong>Code/Technical:</strong> Use Special font (Spectra Volt)
+              for technical content
             </li>
           </ul>
         </div>
