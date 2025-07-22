@@ -106,7 +106,17 @@ body {
   gap: 100px;
   overflow-x: hidden;
 }
+/* Main Content Styles */
+main {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding-top: 80px; /* Account for fixed header */
+}
 
+button {
+  color: var(--lunar-ash);
+}
 /* Video Background Styles */
 .back-vid {
   position: fixed;
@@ -229,15 +239,10 @@ header {
   width: 100%;
   margin-top: -23.5%;
 }
-/* Main Content Styles */
-main {
-  position: relative;
-  z-index: 1;
-  padding-top: 80px; /* Account for fixed header */
-}
 
 /* Hero Section */
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -247,14 +252,47 @@ main {
 }
 
 .hero-info {
+  position: absolute;
   max-width: 800px;
+  left: 5%;
 }
 
-.hero-title {
-  font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  margin-bottom: 1rem;
-  color: var(--satin-sheen-gold);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+.hero-info .hero-info-title {
+  color: var(--lunar-ash);
+  padding: 8px 5px;
+  border: 1px solid var(--lunar-ash);
+  width: 240px;
+  background-color: var(--moody-purple);
+  box-shadow: 0 0 5px var(--lunar-ash);
+  border-radius: 50px;
 }
+
+.hero-info h1 {
+  font-size: 60px;
+  max-width: 600px;
+  font-weight: 700;
+  line-height: 70px;
+  margin-top: 40p;
+  margin-bottom: 30px;
+}
+
+.hero-info p {
+  max-width: 500px;
+  line-height: 25px;
+  margin-bottom: 40 px;
+  font-size: 20px;
+}
+.hero-info button {
+  color: var(--lunar-ash);
+  padding: 15px 35px;
+  border-radius: 10px;
+  border: 1px solid var(--sunset-orange);
+  background-color: var(var(--moody-purple));
+  box-shadow: 0 0 5px var(--sunset-orange);
+  cursor: pointer;
+}
+.hero-info button:hover {
+  box-shadow: 0 0 5px var(--satin-sheen-gold);
+}
+
 /* Section Styles */
