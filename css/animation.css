@@ -1,3 +1,4 @@
+/* TODO: Find a way to make a holographic effect for the buttons */
 @keyframes holo-gradient {
   0% {
     background-position: 0% 10%;
@@ -60,9 +61,40 @@
     background-position: 100% 0%;
   }
 }
-
+/* FIXME: Change the gradients to animate better. */
+/* TODO: Add the colors in the front to the back end of the gradient */
 .white-all-gradient {
   background: var(--white-begin-all);
+  background-size: 200% auto;
+  background-position: 0 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite;
+}
+
+.black-all-gradient {
+  background: var(--black-begin-all);
+  background-size: 200% auto;
+  background-position: 0 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite;
+}
+
+.white-color-center-gradient {
+  background: var(--white-begin-three-center);
+  background-size: 200% auto;
+  background-position: 0 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite;
+}
+
+.black-color-center-gradient {
+  background: var(--black-begin-three-center);
   background-size: 200% auto;
   background-position: 0 0;
   background-clip: text;
@@ -75,16 +107,6 @@
   to {
     background-position: 100% 0;
   }
-}
-
-.black-all-gradient {
-  background: var(--black-begin-all);
-  background-size: 200% auto;
-  background-position: 0 0;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animate-gradient 2.5s linear infinite;
 }
 
 @keyframes scroll-down {
