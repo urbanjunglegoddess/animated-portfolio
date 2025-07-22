@@ -62,16 +62,17 @@
 }
 
 .gradient {
-  background: var(--black-begin-all);
-  background-size: 200%;
+  background: var(--white-begin-all);
+  background-size: 200% auto;
+  background-position: 0 0;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: animate-gradient 2.5s liner infinite;
+  animation: animate-gradient 2.5s linear infinite;
 }
 
 @keyframes animate-gradient {
   to {
-    background-position: 200%;
+    background-position: 100% 0;
   }
 }
