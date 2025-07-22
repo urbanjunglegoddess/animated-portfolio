@@ -71,13 +71,21 @@
 }
 /* CSS Custom Properties (Variables) */
 :root {
-  /* Color Variables */
+  /* Color Variables HEX */
   --void-black: #0a0a0aff;
   --sunset-orange: #d3541aff;
   --moody-purple: #3a2465ff;
   --forest-green: #1e3a2aff;
   --satin-sheen-gold: #c4a742ff;
   --lunar-ash: #e8e6e1ff;
+
+  /* Color Variables RGB */
+  --void-black-rgb: 10, 10, 10;
+  --sunset-orange-rgb: 211, 84, 26;
+  --moody-purple-rgb: 58, 36, 101;
+  --forest-green-rgb: 30, 58, 42;
+  --satin-sheen-gold-rgb: 196, 167, 66;
+  --lunar-ash-rgb: 232, 230, 225;
 
   /* Font Variables */
   --font-primary: "Space Mono", Arial, sans-serif;
@@ -122,6 +130,17 @@
     var(--satin-sheen-gold) 75%,
     var(--void-black) 100%
   );
+
+  /* Opacity Variables */
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
 }
 /* Base Styles */
 html {
@@ -145,10 +164,14 @@ body {
 }
 /* Main Content Styles */
 main {
-  width: 100%;
   position: relative;
-  z-index: 1;
-  padding-top: 80px; /* Account for fixed header */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  background-color: #001f7c38;
 }
 
 button {
@@ -157,14 +180,10 @@ button {
 /* Video Background Styles */
 .back-vid {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  right: 0;
+  bottom: 0;
   z-index: -1;
   mix-blend-mode: overlay;
-  opacity: 0.7;
 }
 
 /* Header Styles */
@@ -228,12 +247,15 @@ header {
   color: var(--lunar-ash);
   text-decoration: none;
   font-family: var(--font-body);
+  font-weight: 700;
+  transition: 0.3s;
   margin: 0 10px;
   transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
   color: var(--sunset-orange);
+  text-shadow: 0 0 15px black;
 }
 
 .box-icons {
@@ -258,7 +280,7 @@ header {
 }
 
 .box-icons a:hover {
-  background-color: var(--sunset-orange);
+  background-color: var(--lunar-ash);
   color: var(--void-black);
   box-shadow: 0 0 15px var(--sunset-orange);
   transition: 0.3s;
@@ -268,7 +290,9 @@ header {
   position: absolute;
   top: 0;
   width: 100%;
+  display: flex;
   justify-content: center;
+  z-index: -1;
   mix-blend-mode: lighten;
 }
 
@@ -280,12 +304,11 @@ header {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh;
   display: flex;
+  width: 100%;
+  height: 100vh;
   align-items: center;
   justify-content: space-between;
-  text-align: center;
-  padding: 0 2rem;
 }
 
 .hero-info {
@@ -297,11 +320,11 @@ header {
 .hero-info .hero-info-title {
   color: var(--lunar-ash);
   padding: 8px 5px;
-  border: 1px solid var(--lunar-ash);
-  width: 240px;
-  background-color: var(--moody-purple);
-  box-shadow: 0 0 5px var(--lunar-ash);
   border-radius: 50px;
+  border: 1px solid #72a1de94;
+  width: 240px;
+  background-color: #2200493d;
+  box-shadow: 0 0 5px #72a1de84;
 }
 
 .hero-info h1 {
@@ -328,9 +351,51 @@ header {
   background-color: var(var(--moody-purple));
   box-shadow: 0 0 5px var(--sunset-orange);
   cursor: pointer;
+  transition: 0.3s;
 }
 .hero-info button:hover {
   box-shadow: 0 0 5px var(--satin-sheen-gold);
 }
 
-/* Section Styles */
+.hero-vid-box {
+  position: absolute;
+  right: 3%;
+}
+
+.hero-vid {
+  height: 900px;
+  mix-blend-mode: lighten;
+}
+
+.scroll-down {
+  height: 50px;
+  width: 30px;
+  border: 2px solid lightgray;
+  position: absolute;
+  left: 49%;
+  bottom: 8%;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.626);
+}
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 2px solid lightgray;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 2s ease-in-out infinite;
+}
+.scroll-down::before {
+  top: 30%;
+  animation-delay: 0.5s;
+  /* animation: scroll-down 1s ease-in-out infinite; */
+}
+
+/* */

@@ -61,7 +61,7 @@
   }
 }
 
-.gradient {
+.white-all-gradient {
   background: var(--white-begin-all);
   background-size: 200% auto;
   background-position: 0 0;
@@ -74,5 +74,29 @@
 @keyframes animate-gradient {
   to {
     background-position: 100% 0;
+  }
+}
+
+.black-all-gradient {
+  background: var(--black-begin-all);
+  background-size: 200% auto;
+  background-position: 0 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite;
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  30%,
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
   }
 }
