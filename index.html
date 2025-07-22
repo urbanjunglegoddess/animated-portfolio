@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -62,31 +62,54 @@
     <!-- Header/Navigation -->
     <header>
       <nav class="navbar">
-        <div class="nav-brand">
+        <div class="nav-logo left">
           <a href="#home"><img src="/assets/images/logo.svg" alt="logo" /> </a>
           <h1>Urban Jungle Goddess</h1>
         </div>
-        <ul class="nav-menu">
+        <ul class="nav-menu center">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
         </ul>
-        <div class="box-icons">
+        <div class="box-icons right">
           <a href=""><i class="bxl bx-youtube"></i></a>
-          <a href=""><i class="bxl bx-youtube"></i></a>
+          <a href=""><i class="bxl bx-github"></i></a>
           <a href=""><i class="bxl bx-linkedin"></i></a>
         </div>
       </nav>
     </header>
 
+    <div class="blackhole-box">
+      <video
+        loop
+        autoplay
+        muted
+        playsinline
+        src="./assets/videos/blackhole.mp4"
+        type="video/mp4"
+        class="blackhole"
+      ></video>
+    </div>
+
     <!-- Main Content -->
     <main>
       <!-- Hero Section -->
       <section id="home" class="hero">
-        <div class="hero-content">
-          <h1 class="hero-title">Welcome to My Portfolio</h1>
-          <p class="hero-subtitle">Creative Web Developer & Designer</p>
-          <button class="cta-button">View My Work</button>
+        <div class="hero-info">
+          <div class="hero-info-title">
+            <i class="bx bx-diamonds"></i>
+            Front-End Developer Portfolio
+            <i class="bx bx-diamonds"></i>
+          </div>
+
+          <h1>Providing the best Project experience</h1>
+          <p>
+            I'm a Front-End Developer with experience in website, mobile, and
+            software development. Check out my projects and skills.
+          </p>
+          <button class="cta-button">
+            <i class="bx bx-send"></i>Contact Me
+          </button>
         </div>
       </section>
 
@@ -126,5 +149,74 @@
 
     <!-- Scripts -->
     <script src="./app.js"></script>
+
+    <style>
+      .cta-button {
+        position: relative;
+        background: linear-gradient(
+          120deg,
+          var(--sunset-orange),
+          var(--moody-purple),
+          var(--forest-green),
+          var(--satin-sheen-gold),
+          var(--lunar-ash),
+          var(--sunset-orange) 90%
+        );
+        background-size: 200% 200%;
+        color: var(--void-black);
+        border: 2px solid var(--lunar-ash);
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-family: var(--font-primary);
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow:
+          0 0 20px 4px var(--moody-purple),
+          0 0 40px 8px var(--sunset-orange);
+        overflow: hidden;
+        z-index: 1;
+        transition:
+          background-position 0.5s,
+          box-shadow 0.3s;
+        animation: holo-gradient 3s linear infinite;
+      }
+
+      @keyframes holo-gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .cta-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0.1) 100%
+        );
+        opacity: 0.7;
+        pointer-events: none;
+        border-radius: 50px;
+        z-index: 2;
+      }
+
+      .cta-button:hover {
+        box-shadow:
+          0 0 40px 8px var(--forest-green),
+          0 0 80px 16px var(--satin-sheen-gold);
+        background-position: 100% 50%;
+      }
+    </style>
   </body>
 </html>
