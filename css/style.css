@@ -225,7 +225,7 @@ header {
   mix-blend-mode: lighten;
 }
 
-.blackhole-box video {
+.blackhole {
   width: 100%;
   margin-top: -23.5%;
 }
@@ -246,7 +246,7 @@ main {
   padding: 0 2rem;
 }
 
-.hero-content {
+.hero-info {
   max-width: 800px;
 }
 
