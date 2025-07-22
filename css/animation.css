@@ -62,5 +62,16 @@
 }
 
 .gradient {
-  background: linear-gradient(to right, var(--));
+  background: var(--black-begin-all);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s liner infinite;
+}
+
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
 }
