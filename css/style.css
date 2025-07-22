@@ -88,11 +88,16 @@
   --font-special: "Spectra Volt", monospace;
 
   /*Gradient Variables*/
-  --white-begin-all:linear-gradient(90deg, hsla(43, 13%, 90%, 1) 0%, hsla(43, 13%, 90%, 1) 20%, hsla(260, 47%, 27%, 1) 40%, hsla(146, 32%, 17%, 1) 60%, hsla(19, 78%, 46%, 1) 80%, hsla(47, 52%, 51%, 1) 100%);
-  --white-begin-three-center:  linear-gradient(90deg, hsla(43, 13%, 90%, 1) 0%, hsla(43, 13%, 90%, 1) 25%, hsla(260, 47%, 27%, 1) 50%, hsla(19, 78%, 46%, 1) 75%, hsla(47, 52%, 51%, 1) 100%);
-  --black-begin-all: linear-gradient(90deg, hsla(0, 0%, 4%, 1) 0%, hsla(260, 47%, 27%, 1) 19%, hsla(146, 32%, 17%, 1) 43%, hsla(19, 78%, 46%, 1) 61%, hsla(47, 52%, 51%, 1) 77%, hsla(0, 0%, 4%, 1) 95%);
-  --black-begin-three-center: linear-gradient(90deg, hsla(0, 0%, 4%, 1) 0%, hsla(0, 0%, 4%, 1) 25%, hsla(260, 47%, 27%, 1) 50%, hsla(19, 78%, 46%, 1) 75%, hsla(47, 52%, 51%, 1) 100%);
-  
+  --white-begin-all: linear-gradient(90deg,var(--lunar-ash) 0%, var(--forest-green) 20%, var(--moody-purple) 40%, var(--sunset-orange) 60%, var(--satin-sheen-gold) 80%, var(--lunar-ash) 100%); 
+
+ --white-begin-three-center:linear-gradient(90deg,var(--lunar-ash) 0%,, var(--moody-purple) 25%, var(--sunset-orange) 50%, var(--satin-sheen-gold) 70%, var(--lunar-ash) 100%); 
+
+ --black-begin-all: linear-gradient(90deg,var(--void-black) 0%, var(--forest-green) 20%, var(--moody-purple) 40%, var(--sunset-orange) 60%, var(--satin-sheen-gold) 80%, var(--void-black) 100%)
+ 
+ --black-begin-three-center:linear-gradient(90deg,var(var(--void-black)) 0%,, var(--moody-purple) 25%, var(--sunset-orange) 50%, var(--satin-sheen-gold) 70%, var(var(--void-black)) 100%); 
+
+}
+ /* Base Styles */
 html {
   scroll-behavior: smooth;
 }
@@ -274,6 +279,7 @@ header {
 }
 
 .hero-info h1 {
+  font-family: var(--font-display);
   font-size: 60px;
   max-width: 600px;
   font-weight: 700;
