@@ -88,16 +88,42 @@
   --font-special: "Spectra Volt", monospace;
 
   /*Gradient Variables*/
-  --white-begin-all: linear-gradient(90deg,var(--lunar-ash) 0%, var(--forest-green) 20%, var(--moody-purple) 40%, var(--sunset-orange) 60%, var(--satin-sheen-gold) 80%, var(--lunar-ash) 100%); 
-
- --white-begin-three-center:linear-gradient(90deg,var(--lunar-ash) 0%,, var(--moody-purple) 25%, var(--sunset-orange) 50%, var(--satin-sheen-gold) 70%, var(--lunar-ash) 100%); 
-
- --black-begin-all: linear-gradient(90deg,var(--void-black) 0%, var(--forest-green) 20%, var(--moody-purple) 40%, var(--sunset-orange) 60%, var(--satin-sheen-gold) 80%, var(--void-black) 100%)
- 
- --black-begin-three-center:linear-gradient(90deg,var(var(--void-black)) 0%,, var(--moody-purple) 25%, var(--sunset-orange) 50%, var(--satin-sheen-gold) 70%, var(var(--void-black)) 100%); 
-
+  --white-begin-all: linear-gradient(
+    90deg,
+    var(--lunar-ash) 0%,
+    var(--forest-green) 20%,
+    var(--moody-purple) 40%,
+    var(--sunset-orange) 60%,
+    var(--satin-sheen-gold) 80%,
+    var(--lunar-ash) 100%
+  );
+  --white-begin-three-center: linear-gradient(
+    90deg,
+    var(--lunar-ash) 0%,
+    var(--moody-purple) 25%,
+    var(--sunset-orange) 50%,
+    var(--satin-sheen-gold) 75%,
+    var(--lunar-ash) 100%
+  );
+  --black-begin-all: linear-gradient(
+    90deg,
+    var(--void-black) 0%,
+    var(--forest-green) 20%,
+    var(--moody-purple) 40%,
+    var(--sunset-orange) 60%,
+    var(--satin-sheen-gold) 80%,
+    var(--void-black) 100%
+  );
+  --black-begin-three-center: linear-gradient(
+    90deg,
+    var(--void-black) 0%,
+    var(--moody-purple) 25%,
+    var(--sunset-orange) 50%,
+    var(--satin-sheen-gold) 75%,
+    var(--void-black) 100%
+  );
 }
- /* Base Styles */
+/* Base Styles */
 html {
   scroll-behavior: smooth;
 }
