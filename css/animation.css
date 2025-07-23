@@ -122,3 +122,14 @@
     opacity: 0;
   }
 }
+
+@keyframes hoverAnimation {
+  0% {
+    box-shadow: 0 0 5px var(--lunar-ash);
+    transform: translate(100%, 50%) rotate(30deg);
+  }
+  100% {
+    box-shadow: 0 0 15px var(--lunar-ash);
+    transform: translateX(80%, 50%) rotate(0deg);
+  }
+}
