@@ -76,7 +76,7 @@
   --sunset-orange: #d3541aff;
   --moody-purple: #3a2465ff;
   --forest-green: #1e3a2aff;
-  --satin-sheen-gold: #CC912D;
+  --satin-sheen-gold: #cc912d;
   --lunar-ash: #e8e6e1ff;
 
   /* Color Variables RGB */
@@ -327,7 +327,7 @@ header {
   max-width: 800px;
   left: 5%;
 }
-
+/* TODO: Improve gradient animations (smoother color transitions) */
 .hero-info .hero-info-title {
   color: var(--lunar-ash);
   padding: 8px 5px;
@@ -431,7 +431,7 @@ header {
   height: 100%;
   margin-top: 30px;
 }
-
+/* TODO: Add a Holographic button effect */
 .card {
   display: flex;
   align-items: flex-start;
