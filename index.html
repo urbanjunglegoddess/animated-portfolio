@@ -27,13 +27,13 @@
     <meta property="og:url" content="#" />
     <meta property="og:image" content="" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="" />
+    <!-- Favicon
+    <link rel="icon" type="image/x-icon" href="" /> -->
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/responsive.css" />
-    <link rel="stylesheet" href="/css/animation.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/animation.css" />
     <link
       href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
       rel="stylesheet"
@@ -44,26 +44,20 @@
     />
 
     <!-- Preload important resources -->
-    <link rel="preload" href="" as="font" type="font/woff2" crossorigin />
+    <!-- <link rel="preload" href="" as="font" type="font/woff2" crossorigin /> -->
   </head>
 
   <body>
     <!-- Background Video -->
-    <video
-      loop
-      autoplay
-      muted
-      playsinline
-      src="/assets/videos/galaxy.mp4"
-      type="video/mp4"
-      class="back-vid"
-    ></video>
+    <video loop autoplay muted playsinline class="back-vid">
+      <source src="assets/videos/galaxy.mp4" type="video/mp4" />
+    </video>
 
     <!-- Header/Navigation -->
     <header>
       <nav class="navbar">
         <div class="nav-logo left">
-          <a href="#home"><img src="/assets/images/logo.svg" alt="logo" /> </a>
+          <a href="#home"><img src="assets/images/logo.svg" alt="logo" /> </a>
           <h1>Urban Jungle Goddess</h1>
         </div>
         <ul class="nav-menu center">
@@ -80,15 +74,9 @@
     </header>
 
     <div class="blackhole-box">
-      <video
-        loop
-        autoplay
-        muted
-        plays-inline
-        src="./assets/videos/blackhole.mp4"
-        type="video/mp4"
-        class="blackhole"
-      ></video>
+      <video loop autoplay muted playsinline class="blackhole">
+        <source src="./assets/videos/blackhole.mp4" type="video/mp4" />
+      </video>
     </div>
 
     <!-- Main Content -->
@@ -101,142 +89,221 @@
             Front-End Developer Portfolio
           </div>
 
-          <h1>Providing <span class="white-color-center-gradient">the best</span> Project <span class="white-color-center-gradient">experience</span></h1>
+          <h1>
+            Providing
+            <span class="white-color-center-gradient">the best</span> Project
+            <span class="white-color-center-gradient">experience</span>
+          </h1>
           <p>
             I'm a Front-End Developer with experience in website, mobile, and
             software development. Check out my projects and skills.
           </p>
           <!-- TODO: Add a holographic effect to the button -->
-          <button> 
-            <i class="bx bx-send"></i>Contact Me
-          </button>
+          <button><i class="bx bx-send"></i>Contact Me</button>
         </div>
-        <div class="hero-vid-box"><video autoplay loop muted plays-inline src="/assets/videos/hero-video.mp4" type="video/mp4" class="hero-vid"></video></div>
+        <div class="hero-vid-box">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            src="assets/videos/hero-video.mp4"
+            class="hero-vid"
+          ></video>
+        </div>
 
-        <div class="scroll-down">
+        <div class="scroll-down"></div>
+      </section>
 
+      <!-- Info Section -->
+      <section class="info-section">
+        <h1 class="section-title">Hello, there! 👋🏾</h1>
+        <div class="info-cards">
+          <div class="card">
+            <h1>Hi there, I'm Omegea</h1>
+            <p>
+              With 5 years experience, I have honed my skills in both Front-End
+              and Backend DEvelopment, creating dynamic and responsive websites.
+            </p>
+            <img src="assets/images/grid1.png" alt="card-image" />
+          </div>
+
+          <div class="card">
+            <h1>Tech Stack</h1>
+            <p>
+              I specialize in a variety of languages, frameworks, and tool that
+              allow me to build robust ans scalable applications.
+            </p>
+            <img src="assets/images/grid2.png" alt="card-image" />
+          </div>
+
+          <div class="card">
+            <h1>I'm very flexible with time zone communication & locations</h1>
+            <p>
+              I am based in the United States and open the remote work
+              worldwide.
+            </p>
+            <video autoplay loop muted playsinline aria-label="globe video">
+              <source src="assets/videos/glob.mp4" type="video/mp4" />
+            </video>
+
+            <button><i class="bx bx-link-external"></i>Contact Me</button>
+          </div>
+          <div class="card">
+            <h1>My passion for coding</h1>
+            <p>
+              I love solving problems and building things through code.
+              Programming isn't just my profession-it's my passion . I enjoy
+              exploring new technologies, and enhancing my skills.
+            </p>
+            <img src="assets/images/grid4.png" alt="card-image" />
+          </div>
         </div>
       </section>
 
-    <!-- Info Section -->
-<section class="info-section">
-<h1 class="section-title"> Hello, there! 👋🏾</h1>
-<div class="info-cards">
+      <section class="my-project">
+        <h1 class="section-title autoDisplay">My Projects</h1>
+        <div class="project-card">
+          <div class="project-vidbox">
+            <video
+              loop
+              id="projectVid1"
+              src="assets/videos/project1.mp4"
+            ></video>
+            <div class="hover-sign"></div>
+          </div>
+          <div class="project-info">
+            <h1>
+              Animated
+              <span class="white-color-center-gradient">Gaming</span> Website
+            </h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi,
+              aut? Quia tempore repellat deserunt aspernatur pariatur,
+              doloremque eum beatae, quis aperiam ea unde nostrum autem debitis
+              harum amet animi laudantium.
+            </p>
+            <button>
+              <i class="bx bx-arrow-out-up-right-square"></i>Website
+            </button>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-vidbox">
+            <video
+              loop
+              id="projectVid2"
+              src="assets/videos/project2.mp4"
+            ></video>
+          </div>
+          <div class="project-info">
+            <h1>
+              Animated
+              <span class="white-color-center-gradient">Gaming</span> Website
+            </h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi,
+              aut? Quia tempore repellat deserunt aspernatur pariatur,
+              doloremque eum beatae, quis aperiam ea unde nostrum autem debitis
+              harum amet animi laudantium.
+            </p>
+            <button>
+              <i class="bx bx-arrow-out-up-right-square"></i>Website
+            </button>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-vidbox">
+            <video
+              loop
+              id="projectVid3"
+              src="assets/videos/project3.mp4"
+            ></video>
+          </div>
+          <div class="project-info">
+            <h1>
+              Animated
+              <span class="white-color-center-gradient">Gaming</span> Website
+            </h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi,
+              aut? Quia tempore repellat deserunt aspernatur pariatur,
+              doloremque eum beatae, quis aperiam ea unde nostrum autem debitis
+              harum amet animi laudantium.
+            </p>
+            <button>
+              <i class="bx bx-arrow-out-up-right-square"></i> Website
+            </button>
+          </div>
+        </div>
+      </section>
 
-  <div class="card">
-<h1>Hi there, I'm Omegea</h1>
-<p>
-  With 5 years experience, I have honed my skills in both Front-End and Backend DEvelopment, creating dynamic and responsive websites. 
-</p>
-<img src="/assets/images/grid1.png" alt="card-image">
-  </div>
+      <!--Skill Section-->
+      <section class="skills">
+        <h1 class="section-title">My Skills</h1>
+        <div class="skills-box">
+          <img
+            class="skills-image"
+            src="assets/images/digital%20brain%20(2).png"
+            alt="skills-image"
+          />
+        </div>
 
-  <div class="card">
-<h1>Tech Stack
-</h1>
-<p>
- I specialize in a variety of languages, frameworks, and tool that allow me to build robust ans scalable  applications. 
-</p>
-<img src="/assets/images/grid2.png" alt="card-image">
-  </div>
+        <div class="designer">
+          <h1 class="gradient">Designer</h1>
+          <p>
+            I have expertise in HTML, CSS, Javascript and design tools like
+            Figma and Affinity Design Suite. My strength lie in blending
+            aesthetics with functionality to create seamless user expertise.
+          </p>
+        </div>
 
-  <div class="card">
-<h1>I'm very flexible with time zone communication & locations</h1>
-<p>
-  I am based in the United States and open the remote work worldwide.
-</p>
-<video autoplay loop muted plays-inline src="assets/videos/glob.mp4" type="video/mp4" alt="globe video"></video>
+        <div class="coder">
+          <h1 class="gradient">Coder</h1>
+          <p>
+            I'm skilled in HTML, CSS, Javascript, and frameworks like React and
+            Node.js. I also have experience with database management using
+            MongoDB and MySQL.
+          </p>
+        </div>
 
-<button><i class="bx bx-link-external"></i>Contact Me</button>
-  </div>
-  <div class="card">
-<h1>My passion for coding</h1>
-<p>
-I love solving problems and building things through code. Programming isn't just my profession-it's my passion . I enjoy exploring new technologies, and enhancing my skills. 
-</p>
-<img src="/assets/images/grid4.png" alt="card-image">
-  </div>
-</div>
-</section>
+        <div
+          class="slider"
+          data-reverse="true"
+          style="--width: 100px; --height: 100px; --quantity: 9"
+        ></div>
 
-<section class="my-project">
-<h1 class="section-title autoDisplay">My Projects</h1>
-<div class="project-card">
-  <div class="project-vidbox">
-    <video loop id="projectVid1" src="assets/videos/project1.mp4"></video>
-    <div class="hover-sign"></div>
-  </div>
-  <div class="project-info">
-    <h1>Animated <span class="white-color-center-gradient">Gaming</span> Website</h1>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, aut? Quia tempore repellat deserunt aspernatur pariatur, doloremque eum beatae, quis aperiam ea unde nostrum autem debitis harum amet animi laudantium.
-    </p>
-    <button><i class='bx  bx-arrow-out-up-right-square'  ></i> </i> Website</button>
-  </div>
-</div>
-<div class="project-card">
-  <div class="project-vidbox">
-    <video loop id="projectVid2" src="assets/videos/project2.mp4"></video>
-
-  </div>
-  <div class="project-info">
-    <h1>Animated <span class="white-color-center-gradient">Gaming</span> Website</h1>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, aut? Quia tempore repellat deserunt aspernatur pariatur, doloremque eum beatae, quis aperiam ea unde nostrum autem debitis harum amet animi laudantium.
-    </p>
-    <button><i class='bx  bx-arrow-out-up-right-square'  ></i> </i> Website</button>
-  </div>
-</div>
-<div class="project-card">
-  <div class="project-vidbox">
-    <video loop id="projectVid3" src="assets/videos/project3.mp4"></video>
-  </div>
-  <div class="project-info">
-    <h1>Animated <span class="white-color-center-gradient">Gaming</span> Website</h1>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, aut? Quia tempore repellat deserunt aspernatur pariatur, doloremque eum beatae, quis aperiam ea unde nostrum autem debitis harum amet animi laudantium.
-    </p>
- <button><i class='bx  bx-arrow-out-up-right-square'  ></i> </i> Website</button>
-  </div>
-</div>
-</section>
-
-<!--Skill Section-->
-<section class="skills">
-  <h1 class="section-title">My Skills</h1>
-  <div class="skills-box">
-    <img class="skills-image" src="/assets/images/digital brain (2).png" alt="skills-image">
-  </div>
-
-<div class="designer">
- <h1 class="gradient">Designer</h1>
- <p>I have expertise in HTML, CSS, Javascript and design tools like Figma and Affinity Design Suite. My strength lie in blending aesthetics with functionality to create seamless user expertise.</p>
-</div>
-
-<div class="coder">
- <h1 class="gradient">Coder</h1>
- <p>I'm skilled in HTML, CSS, Javascript, and frameworks like React and Node.js. I also have experience with database management using MongoDB and MySQL.</p>
-</div>
-
-<div class="slider" reverse="true" style="
---width: 100px;
---height:100px;
---quantity:9; 
-"></div>
-
-<div class="list">
-  <div class="item" style="--position:1"><img src="assets/images/14.png" alt="slider-image"></div>
-  <div class="item" style="--position:2"><img src="assets/images/14.png" alt="slider-image"></div>
-  <div class="item" style="--position:3"><img src="assets/images/14.png" alt="slider-image"></div>
-  <div class="item" style="--position:4"><img src="assets/images/14.png" alt="slider-image"></div>
-  <div class="item" style="--position:5"><img src="assets/images/14.png" alt="slider-image"></div>
-  <div class="item" style="--position:6"><img src="assets/images/14.png" alt="slider-image"></div>
-  <div class="item" style="--position:7"><img src="assets/images/14.png" alt="slider-image"></div>
-  <div class="item" style="--position:8"><img src="assets/images/14.png" alt="slider-image"></div>
-  <div class="item" style="--position:9"><img src="assets/images/14.png" alt="slider-image"></div>
-</div>
-</section>
-
+        <div class="list">
+          <div class="item" style="--position: 1">
+            <img src="assets/images/14.png" alt="slider-image" />
+          </div>
+          <div class="item" style="--position: 2">
+            <img src="assets/images/14.png" alt="slider-image" />
+          </div>
+          <div class="item" style="--position: 3">
+            <img src="assets/images/14.png" alt="slider-image" />
+          </div>
+          <div class="item" style="--position: 4">
+            <img src="assets/images/14.png" alt="slider-image" />
+          </div>
+          <div class="item" style="--position: 5">
+            <img src="assets/images/14.png" alt="slider-image" />
+          </div>
+          <div class="item" style="--position: 6">
+            <img src="assets/images/14.png" alt="slider-image" />
+          </div>
+          <div class="item" style="--position: 7">
+            <img src="assets/images/14.png" alt="slider-image" />
+          </div>
+          <div class="item" style="--position: 8">
+            <img src="assets/images/14.png" alt="slider-image" />
+          </div>
+          <div class="item" style="--position: 9">
+            <img src="assets/images/14.png" alt="slider-image" />
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -245,6 +312,6 @@ I love solving problems and building things through code. Programming isn't just
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
